@@ -41,13 +41,15 @@ def complete_text(text, n_chars=50, temperature=1):
     for _ in range(n_chars):
         text+=next_char(text, temperature)
         print(text)
+    for i in range(10):
+        print()
     return text
 
 if __name__ == "__main__":
     argv_size = len(sys.argv)
     start = 'i'
     num = 100
-    temp = 0.5
+    temp = 0.6
     if argv_size>1 and sys.argv[1]=='help':
         print("usage: [letter] [num chars] [temperature]")
     elif argv_size>1:
